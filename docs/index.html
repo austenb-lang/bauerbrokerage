@@ -3,45 +3,143 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bauer Brokerage | Business Financing Solutions</title>
-  <meta name="description" content="Bauer Brokerage helps businesses access the capital they need with fast, transparent, and reliable financing solutions.">
-  <link rel="stylesheet" href="style.css">
+  <title>Bauer Brokerage</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      color: #1A1F36;
+    }
+
+    /* Header / Hero Section */
+    header {
+      background-color: #1A1F36;
+      color: #FFD700;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #dcdcdc;
+    }
+
+    /* Contact Button */
+    .scroll-button {
+      display: inline-block;
+      background-color: #FFD700;
+      color: #1A1F36;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 30px;
+    }
+
+    .scroll-button:hover {
+      background-color: #e6c200;
+    }
+
+    /* Contact Form Wrapper */
+    .contact-form-wrapper {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px;
+      background-color: #1A1F36;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      color: #ffffff;
+    }
+
+    .contact-form-wrapper h2 {
+      text-align: center;
+      color: #FFD700;
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+
+    .contact-form-wrapper p {
+      text-align: center;
+      color: #dcdcdc;
+      margin-bottom: 30px;
+      font-size: 1em;
+    }
+
+    .contact-form-wrapper iframe {
+      width: 100%;
+      min-height: 600px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header {
+        padding: 60px 20px;
+      }
+      header h1 {
+        font-size: 2em;
+      }
+      .contact-form-wrapper {
+        padding: 20px;
+        margin: 20px;
+      }
+      .contact-form-wrapper h2 {
+        font-size: 1.5em;
+      }
+      .contact-form-wrapper p {
+        font-size: 0.95em;
+      }
+      .contact-form-wrapper iframe {
+        min-height: 800px;
+      }
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Header / Hero Section -->
   <header>
     <h1>Bauer Brokerage</h1>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <p>Your trusted partner in business growth and financing</p>
+    <a href="#contact" class="scroll-button">Contact Us</a>
   </header>
 
-  <section class="hero">
-    <h2>Business Financing Made Simple</h2>
-    <p>We help small and medium-sized businesses secure the funding they need to grow, expand, and succeed. Fast, transparent, and reliable loan brokerage solutions.</p>
-    <a class="cta-btn" href="#contact">Get Funding Today</a>
-  </section>
+  <!-- Other content sections can go here -->
 
-  <section id="services">
-    <h3>Our Services</h3>
-    <p>At Bauer Brokerage, we connect you with lenders who understand your business needs. Whether you’re looking for working capital, equipment financing, or expansion loans, we’ll help find the right fit.</p>
-    <ul>
-      <li>✔️ Working Capital Loans</li>
-      <li>✔️ Equipment Financing</li>
-      <li>✔️ Expansion & Growth Funding</li>
-      <li>✔️ Tailored Business Loan Solutions</li>
-    </ul>
-  </section>
+  <!-- Contact Form Section -->
+  <div id="contact" class="contact-form-wrapper">
+    <h2>Get in Touch</h2>
+    <p>Fill out the form below and a member of our team will reach out shortly.</p>
+    
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSegTce5BciM96P7M95GZacSSZ_v8jfHMZ8q9maq1P4BsMeWzA/viewform?embedded=true" 
+      marginheight="0" 
+      marginwidth="0"
+    >
+      Loading…
+    </iframe>
+  </div>
 
-  <section id="contact">
-    <h3>Contact Us</h3>
-    <p>Let’s talk about your financing needs. Call or email us today.</p>
-    <p><strong>Phone:</strong> <a href="tel:+17278776439">(727) 877-6439</a></p>
-    <p><strong>Email:</strong> <a href="mailto:bauerbrokerage1@gmail.com">bauerbrokerage1@gmail.com</a></p>
-  </section>
+  <!-- Smooth scroll script -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 
-  <footer>
-    <p>&copy; <script>document.write(new Date().getFullYear())</script> Bauer Brokerage, LLC. All rights reserved.</p>
-  </footer>
 </body>
 </html>
