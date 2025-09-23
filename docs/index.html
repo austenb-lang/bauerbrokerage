@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bauer Brokerage</title>
+  <meta name="description" content="Bauer Brokerage - Business loans, financial consulting, and growth strategies. Helping businesses succeed.">
+  <meta name="keywords" content="business loans, financial consulting, business growth, Bauer Brokerage">
+  <meta name="author" content="Bauer Brokerage">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     body {
       margin: 0;
@@ -27,6 +31,7 @@
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
+      margin-top: 10px;
     }
 
     nav a {
@@ -44,8 +49,40 @@
 
     header h1 {
       text-align: center;
-      margin: 10px 0;
+      margin: 0;
       font-size: 2em;
+    }
+
+    /* Hero Section */
+    #home {
+      text-align: center;
+      padding: 80px 20px;
+      background-color: #e6f0ff;
+    }
+
+    #home h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    #home p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #1E3A8A;
+      color: #ffffff;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #1450a3;
     }
 
     /* Section styling */
@@ -83,6 +120,20 @@
       border-radius: 8px;
     }
 
+    /* Footer */
+    footer {
+      background-color: #1E3A8A;
+      color: #ffffff;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
     /* Responsive adjustments */
     @media (max-width: 600px) {
       header h1 {
@@ -96,6 +147,12 @@
       }
       .contact-form-wrapper iframe {
         min-height: 800px;
+      }
+      #home h2 {
+        font-size: 1.5em;
+      }
+      #home p {
+        font-size: 1em;
       }
     }
   </style>
@@ -113,16 +170,17 @@
     </nav>
   </header>
 
-  <!-- Home Section -->
+  <!-- Home / Hero Section -->
   <section id="home">
-    <h2>Welcome to Bauer Brokerage</h2>
-    <p>We help businesses grow by providing trusted financial solutions and expert guidance.</p>
+    <h2>Helping Businesses Grow With Trusted Financial Solutions</h2>
+    <p>We provide business loans, strategic financial consulting, and expert guidance to help your company succeed.</p>
+    <a href="#contact" class="cta-button">Contact Us</a>
   </section>
 
   <!-- About Us Section -->
   <section id="about">
     <h2>About Us</h2>
-    <p>Bauer Brokerage is dedicated to connecting businesses with the right financing options and strategies. Our team has years of experience helping businesses succeed, from startups to established companies.</p>
+    <p>Bauer Brokerage is dedicated to connecting businesses with the right financing options and strategies. Our experienced team helps startups and established companies alike reach their goals efficiently and successfully.</p>
   </section>
 
   <!-- Services Section -->
@@ -149,6 +207,12 @@
       </iframe>
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Email: <a href="mailto:Bauerbrokerage1@gmail.com">Bauerbrokerage1@gmail.com</a></p>
+    <p>© 2025 Bauer Brokerage LLC. All rights reserved.</p>
+  </footer>
 
   <!-- Smooth scroll -->
   <script>
