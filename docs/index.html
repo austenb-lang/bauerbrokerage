@@ -7,70 +7,73 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0f2f5;
-      color: #1A1F36;
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      color: #1E3A8A;
     }
 
-    /* Header / Hero Section */
+    /* Header / Navigation */
     header {
-      background-color: #1A1F36;
-      color: #FFD700;
-      padding: 80px 20px;
-      text-align: center;
+      background-color: #1E3A8A;
+      color: #ffffff;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #1450a3;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 3em;
+      text-align: center;
+      margin: 10px 0;
+      font-size: 2em;
     }
 
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-      color: #dcdcdc;
+    /* Section styling */
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    /* Contact Button */
-    .scroll-button {
-      display: inline-block;
-      background-color: #FFD700;
-      color: #1A1F36;
-      padding: 12px 28px;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      margin-top: 30px;
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    .scroll-button:hover {
-      background-color: #e6c200;
+    p {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 20px auto;
+      line-height: 1.6;
     }
 
     /* Contact Form Wrapper */
     .contact-form-wrapper {
-      max-width: 800px;
-      margin: 40px auto;
+      background-color: #ffffff;
       padding: 40px;
-      background-color: #1A1F36;
       border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-      color: #ffffff;
-    }
-
-    .contact-form-wrapper h2 {
-      text-align: center;
-      color: #FFD700;
-      margin-bottom: 10px;
-      font-size: 2em;
-    }
-
-    .contact-form-wrapper p {
-      text-align: center;
-      color: #dcdcdc;
-      margin-bottom: 30px;
-      font-size: 1em;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      color: #1E3A8A;
     }
 
     .contact-form-wrapper iframe {
@@ -82,21 +85,14 @@
 
     /* Responsive adjustments */
     @media (max-width: 600px) {
-      header {
-        padding: 60px 20px;
-      }
       header h1 {
-        font-size: 2em;
+        font-size: 1.5em;
+      }
+      nav {
+        flex-direction: column;
       }
       .contact-form-wrapper {
         padding: 20px;
-        margin: 20px;
-      }
-      .contact-form-wrapper h2 {
-        font-size: 1.5em;
-      }
-      .contact-form-wrapper p {
-        font-size: 0.95em;
       }
       .contact-form-wrapper iframe {
         min-height: 800px;
@@ -106,30 +102,55 @@
 </head>
 <body>
 
-  <!-- Header / Hero Section -->
+  <!-- Header / Navigation -->
   <header>
     <h1>Bauer Brokerage</h1>
-    <p>Your trusted partner in business growth and financing</p>
-    <a href="#contact" class="scroll-button">Contact Us</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- Other content sections can go here -->
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome to Bauer Brokerage</h2>
+    <p>We help businesses grow by providing trusted financial solutions and expert guidance.</p>
+  </section>
 
-  <!-- Contact Form Section -->
-  <div id="contact" class="contact-form-wrapper">
-    <h2>Get in Touch</h2>
-    <p>Fill out the form below and a member of our team will reach out shortly.</p>
-    
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSegTce5BciM96P7M95GZacSSZ_v8jfHMZ8q9maq1P4BsMeWzA/viewform?embedded=true" 
-      marginheight="0" 
-      marginwidth="0"
-    >
-      Loading…
-    </iframe>
-  </div>
+  <!-- About Us Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Bauer Brokerage is dedicated to connecting businesses with the right financing options and strategies. Our team has years of experience helping businesses succeed, from startups to established companies.</p>
+  </section>
 
-  <!-- Smooth scroll script -->
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>We offer a variety of business financing solutions, including: <br>
+      - Business Loans & Lines of Credit <br>
+      - Strategic Financial Consulting <br>
+      - Funding for Expansion & Equipment <br>
+      - Personalized Business Guidance</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Fill out the form below and our team will get back to you promptly.</p>
+    <div class="contact-form-wrapper">
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLSegTce5BciM96P7M95GZacSSZ_v8jfHMZ8q9maq1P4BsMeWzA/viewform?embedded=true" 
+        marginheight="0" 
+        marginwidth="0"
+      >
+        Loading…
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Smooth scroll -->
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
