@@ -18,14 +18,28 @@ header h1 {
 }
 
 nav {
-  margin-top: 0.5rem;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav a {
-  color: #fff;
+  color: #1E3A8A;          /* Blue text for all links */
   text-decoration: none;
-  margin: 0 1rem;
   font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #e5e7eb;  /* Light gray hover */
+  color: #1E3A8A;             /* Keep text blue */
+}
+
+nav a.active {
+  background-color: #e5e7eb;  /* Light gray background for active link */
+  color: #1E3A8A;             /* Blue text */
 }
 
 .hero {
