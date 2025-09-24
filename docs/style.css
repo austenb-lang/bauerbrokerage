@@ -5,15 +5,16 @@ body {
   color: #1E3A8A;
 }
 
-/* Header Layout */
+/* Header Layout - White Background */
 header {
-  background-color: #1E3A8A;
-  color: #ffffff;
+  background-color: #ffffff; /* White header */
+  color: #1E3A8A; /* Blue text */
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  border-bottom: 2px solid #e5e7eb; /* subtle gray divider */
 }
 
 .header-left {
@@ -23,13 +24,14 @@ header {
 }
 
 .logo {
-  height: 50px; /* adjust size as needed */
+  height: 55px;
   width: auto;
 }
 
 header h1 {
   margin: 0;
   font-size: 1.8em;
+  color: #1E3A8A;
 }
 
 nav {
@@ -39,7 +41,7 @@ nav {
 }
 
 nav a {
-  color: #ffffff;
+  color: #1E3A8A; /* Blue links */
   text-decoration: none;
   font-weight: bold;
   padding: 8px 15px;
@@ -49,7 +51,7 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  background-color: #1450a3;
+  background-color: #e5e7eb; /* Light gray hover */
 }
 
 nav a {
