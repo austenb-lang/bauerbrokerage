@@ -41,17 +41,22 @@ nav {
 }
 
 nav a {
-  color: #1E3A8A; /* Blue links */
+  color: #1E3A8A;          /* Blue text for all links */
   text-decoration: none;
   font-weight: bold;
   padding: 8px 15px;
   border-radius: 4px;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
-nav a:hover,
+nav a:hover {
+  background-color: #e5e7eb;  /* Light gray hover */
+  color: #1E3A8A;             /* Keep text blue */
+}
+
 nav a.active {
-  background-color: #e5e7eb; /* Light gray hover */
+  background-color: #e5e7eb;  /* Light gray background for active link */
+  color: #1E3A8A;             /* Blue text */
 }
 
 nav a {
